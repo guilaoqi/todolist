@@ -1,0 +1,59 @@
+/**index.wxss**/
+.content {
+  display:flex;
+  flex-direction:column;
+  padding:10px;
+
+}
+.add-list {
+  display:flex;
+  border:1rpx solid #CCC;
+  border-radius: 5rpx;
+  padding:10rpx 2rpx;
+  align-items: center;
+}
+.add-list input{
+  flex:1;
+  vertical-align:middle;
+  line-height:20rpx;
+}
+.add-list image{
+  width: 20px;
+  height:20px;
+  margin:auto 5px;
+}
+.list-show{
+  margin:20rpx 0;
+  border:1rpx solid #CCC;
+  border-radius:5rpx;
+}
+.list-show .item{
+  border-bottom:1rpx solid #CCC;
+  padding:10rpx 5rpx;
+  display:flex;
+  align-items:center;
+}
+.list-show .item:last-child{
+  border-bottom:none;
+}
+.list-show .item text{
+  flex:1;
+  margin-left:15rpx;
+  font-size:35rpx;
+  color:#333;
+
+}
+.list-show .item text.done{
+  text-decoration:line-through;
+  color:#999;
+}
+.list-show .item icon{
+  margin:5rpx 15rpx;
+}
+.footer{
+  padding:10rpx 2rpx;
+  display:flex;
+  justify-content:space-around;
+  font-size:30rpx;
+  color:#666;
+}

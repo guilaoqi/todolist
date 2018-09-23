@@ -1,0 +1,18 @@
+<view class="content">
+  <view class="add-list"> 
+    <image bindtap="addListHandle" src="../../imgs/add.png"></image>
+    <input type="text" placeholder='添加代办事项' value="{{addcontent}}" bindinput='addToListHandle' bindconfirm='addListHandle'/>
+  </view>
+  <view class="list-show">
+    <view class='item' wx:for="{{list}}" wx:key="{{index}}">
+      <icon type="{{item.completed?'success':'circle'}}" size="20" bindtap='changeStatu' data-index="{{index}}"></icon>
+      <text class="{{item.completed?'done':''}}">{{item.name}}</text>
+      <icon type="clear" size="18" bindtap="delete" data-index="{{index}}"></icon>
+    </view>
+  </view>
+  <view class="footer">
+    <text bindtap='toggle'>Toggle all</text>
+    <text>{{length}} items left</text>
+    <text ontap="clearComplete">Clear completed</text>      
+  </view>
+</view>
